@@ -1,0 +1,32 @@
+---
+title: "PSTAT 131 Lab 4"
+author: "Raymond Lee"
+date: '2022-04-27'
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Procedure
+1, training/testing split
+2. fit model on training set
+3. predict on test set
+4. calculate test error rate
+
+Cross-validation (only applied on training set)
+  Model selection: compare test error rates and select the model that is lower
+1. split training data into k folds
+2. for i in k, Gi is the validation set, and G(i not equal to j) is the training set
+--> validation error rate (ei)
+3. cross-validation error rate: e = (1/k)summation of ei
+
+Cross-validation allows us to use less data to select best model by creating groups from
+training set (leave enough data for testing set)
+Also allows us to avoid overfitting (model is too complex --> lower bias but higher variance)
+Overfits a dataset
+
+  Parameter selection: find model parameter with lowest error rate (only one model)
+  ex. which degree polynomial X? 
+
